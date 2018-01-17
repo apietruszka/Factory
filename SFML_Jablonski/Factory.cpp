@@ -7,6 +7,8 @@ Factory::Factory(int _id, int _owner_id, int _starting_units, int _prod, int _x,
 	owner_id = _owner_id;
 	units = _starting_units;
 	production = _prod;
+	x = _x;
+	y = _y;
 }
 
 void Factory::Manage_groups()
@@ -30,6 +32,7 @@ void Factory::Manage_groups()
 				}
 			}
 			//free memo, free some from vector - this is done from Game class to do a clean iterative approach
+			incoming_groups.erase(incoming_groups.begin() + i);
 		}
 	}
 }

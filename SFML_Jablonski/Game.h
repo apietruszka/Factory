@@ -1,5 +1,5 @@
 #ifndef GAME_H
-#include <SFML/Graphics.hpp>
+#include <vector>
 #include "Factory.h"
 
 #define GAME_H
@@ -19,7 +19,7 @@ class Game
 public:
 	Game(int _min_fact, int _max_fact, int _max_prod, int _max_starting_units, int _max_x, int _max_y);
 	void OneStep();
-	void CheckEnd();
+	bool CheckEnd();
 	string DataOutput();
 	void DataInput(string _s);
 
